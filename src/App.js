@@ -1,9 +1,9 @@
 import './App.css';
-
+import Body from './Component/Body';
 function App() {
   return (
    <>
-   
+   < Body/>
    </>
   );
 }

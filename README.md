@@ -2,7 +2,7 @@
 
 -create React app
 install tailwind
-
+  --login form 
 --login/signup page
             -signup/signup form
             -redirect to browser page
