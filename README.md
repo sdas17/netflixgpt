@@ -5,7 +5,17 @@ install tailwind
   --login form 
 --login/signup page
             -signup/signup form
-            -redirect to browser page
+            -form validatiom
+            -useRef hook
+            -firebase setup
+            -Deployment our app to production
+            -create sign up user account
+            -imlement sign in user api
+            --created redux store with user slice
+            
+            -redirect to browser 
+            npm i -D @reduxjs
+            npm i react-redux
 
 --broswer page (after authentication)
             -header
