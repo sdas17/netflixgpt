@@ -5,7 +5,7 @@ import { useEffect } from "react"
 import {  onAuthStateChanged } from "firebase/auth";
 import {auth} from '../utiles/firebase';
 import { useDispatch } from "react-redux";
-import { addObject ,removeObject} from "../utiles/userSlice";
+import { addUser ,removeUser} from "../utiles/userSlice";
 
 
 const Body = () => {
@@ -16,7 +16,7 @@ const Body = () => {
             element:<Login/>
         },
         {
-            path:"/broswer",
+            path:"/browser",
             element:<Broweser/>
         }
     ])
@@ -24,12 +24,10 @@ const Body = () => {
       onAuthStateChanged(auth, (user) => {
         if (user) {
           const {uid,email,displayname}=user;
-          dispatch(addObject({uid:uid,email:email,displayname:displayname}))
+          dispatch(addUser({uid:uid,email:email,displayname:displayname}))
         } else {
           //user is signed out
-          dispatch(removeObject())
-
-      
+          dispatch(removeUser({}))
         }
       });
     },[])
