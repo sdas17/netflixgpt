@@ -72,7 +72,7 @@ const Login = () => {
         .then((userCredential) => {
           const user = userCredential.user;
           console.log(user);
-          navigate("/browser")
+          // navigate("/browser")
         })
         .catch((error) => {
           const errorCode = error.code;
