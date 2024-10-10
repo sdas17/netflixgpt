@@ -1,9 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
 import userSlice from "./userSlice";
-
-const  authsore=configureStore({
-    reducer:{
+import moviewReducers from './MoviewSlice';
+const authsore = configureStore({
+    reducer: {
         user: userSlice,
+        movies: moviewReducers,
     }
 
 })
