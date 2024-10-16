@@ -40,16 +40,10 @@ const Header = () => {
   }, []);
 
 
-
-
-
-
-
-
-
-
-
   const user = useSelector((store) => store.user); // Adjust to your actual state structure
+  const showGptSearch = useSelector((store) => store.gpt.gptSearch)
+  console.log(showGptSearch, '45');
+
   const handleSignout = () => {
     signOut(auth).then(() => {
       // navigate("/")
@@ -70,11 +64,15 @@ const Header = () => {
 
       {user ? (
         <div className="flex p-2 items-center gap-2">
-          <select className="p-2 m-2 bg-gray-900 text-white" onChange={handleLanguageChange}>
+          {showGptSearch && (
+            <select className="p-2 m-2 bg-gray-900 text-white" onChange={handleLanguageChange}>
 
-            {originalLanguage.map((res) => <option key={res.identifer} value={res.identifer} >{res.search}</option>)}
-          </select>
-          <button className="py-2 px-4 text-white mx-4 my-2 rounded-lg bg-purple-300" onClick={handleSearchgptsearch}>Gpt search</button>
+              {originalLanguage.map((res) => <option key={res.identifer} value={res.identifer} >{res.search}</option>)}
+            </select>
+          )
+          }
+
+          <button className="py-2 px-4 text-white mx-4 my-2 rounded-lg bg-purple-300" onClick={handleSearchgptsearch}>{showGptSearch ? ('Gpt Search') : ("Home")}</button>
 
           <img
             className="w-12 h-12 rounded-full"
