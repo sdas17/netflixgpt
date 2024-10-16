@@ -82,3 +82,4 @@ Made the Browsre page amazing with Tailwind CSS
 usePopularMovies Custom hook
 GPT Search Page
 GPT Search Bar
+Lingustic language implemented 
