@@ -6,7 +6,6 @@ import useAnimation from '../utiles/hooks/useAnimation';
 const VideoBackground = ({ moviewId }) => {
     // const animationId = useSelector((store) => store.moviews?.animationMoviews)
     const animationId = useSelector((store) => store.movies?.animationMoviews);
-    console.log(animationId)
     useAnimation({ moviewId });
 
     return (

@@ -22,7 +22,6 @@ const useAnimation = (({ moviewId }) => {
             console.log(moviewTrailerdata.results, 'moviewTrailerdata');
             const dumydata = moviewTrailerdata.results.filter((data) => data.type === 'Trailer')
             const trailer = dumydata.length > 0 ? dumydata[0] : moviewTrailerdata.results[0];
-            // console.log(trailer, animation)
             animation(addAnimationmovews(trailer))
             // setAnimation(trailer)
 

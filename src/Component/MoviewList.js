@@ -2,7 +2,6 @@ import React from 'react'
 import MoviewCard from './MoviewCard'
 
 const MoviewList = ({ tittle, movies }) => {
-    console.log(tittle, movies, '5')
     return (
         <div className='p-6'>
             <h1 className='text-4xl text-white'>{tittle}</h1>
@@ -18,7 +17,7 @@ const MoviewList = ({ tittle, movies }) => {
 
             </div>
         </div>
-      
+
     )
 }
 

@@ -17,7 +17,6 @@ const usemoviewonline = (() => {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             const data = await response.json(); // Assuming the response is in JSON format
-            console.log(data.results); // Handle the data
             dispatch(addNowPlayingMovies(data.results))
         } catch (error) {
             console.error('Error fetching data:', error);

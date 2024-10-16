@@ -4,26 +4,25 @@ import { useSelector } from 'react-redux'
 
 const SecondaryContainer = () => {
     const moviewCard = useSelector((store) => store.movies)
-    console.log(moviewCard,'7');
 
 
     return (
         moviewCard.nowPlayingMovies && (
             <div className="bg-black w-100% ">
-            <div className=" mt-0 -mt-08   pl-20 relative z-20 ">
-      <MoviewList tittle={"Now Playing"} movies={moviewCard.nowPlayingMovies} />
-      <MoviewList tittle={"Trending"} movies={moviewCard.nowPlayingMovies} />
-      <MoviewList tittle={"Popular"} movies={moviewCard.PopularMovies} />
-      <MoviewList
-          tittle={"Upcoming Movies"}
-          movies={moviewCard.nowPlayingMovies}
-      />
-      <MoviewList tittle={"Horror"} movies={moviewCard.nowPlayingMovies} />
-  </div>
-  </div>
+                <div className=" mt-0 -mt-08   pl-20 relative z-20 ">
+                    <MoviewList tittle={"Now Playing"} movies={moviewCard.nowPlayingMovies} />
+                    <MoviewList tittle={"Trending"} movies={moviewCard.nowPlayingMovies} />
+                    <MoviewList tittle={"Popular"} movies={moviewCard.PopularMovies} />
+                    <MoviewList
+                        tittle={"Upcoming Movies"}
+                        movies={moviewCard.nowPlayingMovies}
+                    />
+                    <MoviewList tittle={"Horror"} movies={moviewCard.nowPlayingMovies} />
+                </div>
+            </div>
         )
-       
-  
+
+
     )
 }
 
